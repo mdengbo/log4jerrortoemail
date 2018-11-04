@@ -34,15 +34,15 @@
     <!-- SMTP server的端口地址。默认值：25   QQ:587-->
     <property name="smtpPort" value="587"/>
     <!-- 发送邮件账号，默认为null -->
-    <property name="username" value="1440864716@qq.com"/><!--发件人账号-->
-    <!-- 发送邮件密码，默认为null 163: 1324m2275273476163 QQ:mdbgvadxbxiktyuhgde-->
-    <property name="password" value="gvadxbxiktyuhgde"/><!--发件人密码-->
+    <property name="username" value="144086471621@qq.com"/><!--发件人账号-->
+    <!-- 发送邮件密码，默认为null-->
+    <property name="password" value="XXXXXXXXX"/><!--发件人密码-->
     <!-- 如果设置为true，appender将会使用SSL连接到日志服务器。默认值：false -->
     <property name="SSL" value="false"/>
     <!-- 指定发送到那个邮箱，可设置多个<to>属性，指定多个目的邮箱 -->
-    <property name="email_to" value="m1440864716@163.com"/><!--收件人账号多个可以逗号隔开-->
+    <property name="email_to" value="14408647162112@163.com"/><!--收件人账号多个可以逗号隔开-->
     <!-- 指定发件人名称。如果设置成“&lt;ADMIN&gt; ”，则邮件发件人将会是“<ADMIN> ” -->
-    <property name="email_from" value="1440864716@qq.com" />
+    <property name="email_from" value="1440864712126@qq.com" />
     <!-- 指定emial的标题，它需要满足PatternLayout中的格式要求。如果设置成“Log: %logger - %msg ”，就案例来讲，则发送邮件时，标题为“【Error】: com.foo.Bar - Hello World ”。 默认值："%logger{20} - %m". -->
     <property name="email_subject" value="【fiel-serverError】: %logger" />
     <!-- ERROR邮件发送 -->
