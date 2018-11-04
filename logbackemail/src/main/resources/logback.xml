@@ -51,6 +51,7 @@
         <smtpPort>${smtpPort}</smtpPort>
         <username>${username}</username>
         <password>${password}</password>
+        <!--是否开启异步发送 默认true （开启后一直没有发送成功） 关掉 false 发送成功-->
         <asynchronousSending>false</asynchronousSending>
         <SSL>${SSL}</SSL>
         <to>${email_to}</to>
