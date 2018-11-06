@@ -118,11 +118,13 @@
         </cyclicBufferTracker>
     </appender>
     <!-- 日志输出级别 -->
-    <root level="info">
-        <appender-ref ref="EMAIL"/>
-       <!-- <appender-ref ref="STDOUT" />-->
-        <appender-ref ref="FILE" />
-    </root>
+     <!-- 多环境 日志输出  指定在 application-prod.yml  application-test.yml 生效-->
+    <springProfile name="prod,test">
+        <root level="info">
+            <appender-ref ref="EMAIL"/>
+        </root>
+    </springProfile>
+    
 </configuration>
         
 #log4j maven
