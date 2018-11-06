@@ -1,0 +1,11 @@
+2018-11-06 14:06:03.505 [main] INFO  c.e.changelogerror.ChangelogerrorApplicationTests - Starting ChangelogerrorApplicationTests on SKY-20180622OIV with PID 7224 (started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror)
+2018-11-06 14:06:03.521 [main] INFO  c.e.changelogerror.ChangelogerrorApplicationTests - No active profile set, falling back to default profiles: default
+2018-11-06 14:06:05.150 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-06 14:06:05.475 [main] INFO  c.e.changelogerror.ChangelogerrorApplicationTests - Started ChangelogerrorApplicationTests in 3.07 seconds (JVM running for 4.226)
+2018-11-06 14:06:06.553 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-06 14:06:36.062 [main] INFO  c.e.changelogerror.ChangelogerrorApplicationTests - Starting ChangelogerrorApplicationTests on SKY-20180622OIV with PID 3548 (started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror)
+2018-11-06 14:06:36.064 [main] INFO  c.e.changelogerror.ChangelogerrorApplicationTests - No active profile set, falling back to default profiles: default
+2018-11-06 14:06:37.646 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-06 14:06:38.038 [main] INFO  c.e.changelogerror.ChangelogerrorApplicationTests - Started ChangelogerrorApplicationTests in 2.568 seconds (JVM running for 3.409)
+2018-11-06 14:06:38.367 [main] INFO  c.e.changelogerror.ChangelogerrorApplicationTests - change log success!
+2018-11-06 14:06:38.390 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
