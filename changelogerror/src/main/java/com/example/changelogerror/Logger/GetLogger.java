@@ -2,7 +2,6 @@ package com.example.changelogerror.Logger;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.util.LoggerNameUtil;
-import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

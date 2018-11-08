@@ -1,6 +1,7 @@
 package com.example.changelogerror.controller;
 
 import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;
 import com.example.changelogerror.Logger.GetLogger;
 import com.example.changelogerror.service.LogTest;
@@ -13,6 +14,8 @@ import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author madengbo
@@ -36,8 +39,13 @@ public class ChangeLevel {
     @GetMapping("/changeLog")
     public String changeLog(@NonNull String packageName, @NonNull String logLevel) {
         try {
-            GetLogger loggerContext = (GetLogger) LoggerFactory.getILoggerFactory();
-            loggerContext.myLogger(packageName).setLevel(Level.valueOf(logLevel));
+            LoggerContext loggerContext = (LoggerContext)LoggerFactory.getILoggerFactory();
+
+            loggerContext.getLogger(packageName).setLevel(Level.valueOf(logLevel));
+
+          /*  LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
+            GetLogger getLogger= (GetLogger)loggerContext;
+            getLogger.myLogger(packageName).setLevel(Level.valueOf(logLevel));*/
         } catch (Exception e) {
             log.error("error动态修改日志级别出错，原因：" + e.getMessage(), e);
             return "change log fail!";
