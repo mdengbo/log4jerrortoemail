@@ -1,4 +1,4 @@
-package com.example.changelogerror.service;
+package com.example.changelogerror.testlog;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -11,11 +11,11 @@ import org.springframework.stereotype.Component;
  **/
 @Slf4j
 @Component
-public class LogTest {
+public class Service3Test {
 
     public void testInfo(){
-        log.info("service info test");
-        log.error("service error test");
-        log.debug("service bug test");
+        log.info("service3test info test");
+        log.error("service3test error test");
+        log.debug("service3test bug test");
     }
 }

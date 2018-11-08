@@ -13,10 +13,19 @@
         </encoder>
     </appender>
 
-
-    <logger name="com.example.changelogerror.service" additivity="true" level="${log.level.service}">
+    <logger name="com.example.changelogerror" additivity="true" level="info">
         <appender-ref ref = "STDOUT"/>
     </logger>
+
+   <!-- <logger name="com.example.changelogerror.service" additivity="true" level="info">
+        <appender-ref ref = "STDOUT"/>
+    </logger>
+    <logger name="com.example.changelogerror.service" additivity="true" level="error">
+        <appender-ref ref = "STDOUT"/>
+    </logger>
+    <logger name="com.example.changelogerror.service2" additivity="true" level="debug">
+        <appender-ref ref = "STDOUT"/>
+    </logger>-->
 
     <!-- 按照每天生成日志文件 -->
     <appender name="FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -89,10 +98,16 @@
             <bufferSize>1</bufferSize>
         </cyclicBufferTracker>
     </appender>
-    <!-- 日志输出级别 -->
-    <root level="debug">
+    <!-- 日志输出级别  TRACE < DEBUG < INFO < WARN < ERROR  OFF-->
+    <root level="info">
         <appender-ref ref="EMAIL"/>
-        <appender-ref ref="STDOUT" />
+        <!--<appender-ref ref="STDOUT" />-->
         <appender-ref ref="FILE" />
     </root>
 </configuration>
+<!--判断一个类的日志输出情况，
+首先找到这个类所在的logger（没有特别定义则默认为root），
+然后根据以上规则判断出这个logger的appender和level。
+然后既可以知道这个类的哪些日志会被输出到哪些地方了。
+注意：任何一个类只会和一个logger对应，要么是定义的logger，要么是root，
+判断的关键在于找到这个logger，然后判断这个logger的appender和level。 -->

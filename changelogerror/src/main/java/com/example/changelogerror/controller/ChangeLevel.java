@@ -2,7 +2,10 @@ package com.example.changelogerror.controller;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
+import com.example.changelogerror.Logger.GetLogger;
 import com.example.changelogerror.service.LogTest;
+import com.example.changelogerror.service2.Service2Test;
+import com.example.changelogerror.testlog.Service3Test;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +26,18 @@ public class ChangeLevel {
     @Autowired
     LogTest logTest;
 
+    @Autowired
+    Service2Test service2Test;
+
+    @Autowired
+    Service3Test service3Test;
+
+
     @GetMapping("/changeLog")
     public String changeLog(@NonNull String packageName, @NonNull String logLevel) {
         try {
-            LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
-            loggerContext.getLogger(packageName).setLevel(Level.valueOf(logLevel));
+            GetLogger loggerContext = (GetLogger) LoggerFactory.getILoggerFactory();
+            loggerContext.myLogger(packageName).setLevel(Level.valueOf(logLevel));
         } catch (Exception e) {
             log.error("error动态修改日志级别出错，原因：" + e.getMessage(), e);
             return "change log fail!";
@@ -37,7 +47,11 @@ public class ChangeLevel {
 
     @RequestMapping("/test")
     public String  hello(){
+
         logTest.testInfo();
+        service2Test.testInfo();
+        service3Test.testInfo();
+
         return "hello world";
     }
 }
