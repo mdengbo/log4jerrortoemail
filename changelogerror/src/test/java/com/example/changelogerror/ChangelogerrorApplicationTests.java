@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -49,12 +50,17 @@ public class ChangelogerrorApplicationTests {
 
     @Test
     public void changeLog() {
-        String packageName = "com.example.changelogerror.*.logge1";
+        String packageName = "com.example.changelogerro";
         String logLevel = "debug";
         try {
-            LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
+            LoggerContext loggerContext = (LoggerContext)LoggerFactory.getILoggerFactory();
+           //自定义包引入 可以 通配符 *
             List<Logger> loggerList = loggerContext.getLoggerList();
             List<String> aPackage = getPackageUtils.getPackage(loggerList, packageName);
+
+            if( aPackage.size() == 0){
+                log.info ("please check your packageName, packageName is not exit !");
+            }
             for (String name : aPackage) {
                 loggerContext.getLogger(name).setLevel(Level.valueOf(logLevel));
             }

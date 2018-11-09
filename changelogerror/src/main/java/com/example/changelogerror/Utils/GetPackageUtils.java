@@ -45,8 +45,12 @@ public class GetPackageUtils {
                 }
             }
         } else {
-            //不含 * 直接返回
-            packageNames.add(packageName);
+            //不含 * 验证包名正确性后直接返回
+            for (Logger pac : loggerList) {
+                if(pac.getName().endsWith(packageName)){
+                    packageNames.add(packageName);
+                }
+            }
         }
         return packageNames;
     }

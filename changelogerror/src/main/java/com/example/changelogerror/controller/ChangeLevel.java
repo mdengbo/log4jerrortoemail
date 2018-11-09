@@ -63,12 +63,12 @@ public class ChangeLevel {
     public String changeLog(@NonNull String packageName, @NonNull String logLevel) {
         try {
             LoggerContext loggerContext = (LoggerContext)LoggerFactory.getILoggerFactory();
-
             //自定义包引入 可以 通配符 *
             List<Logger> loggerList = loggerContext.getLoggerList();
             List<String> aPackage = getPackageUtils.getPackage(loggerList, packageName);
+
             if( aPackage.size() == 0){
-                return "please check your packageName, packageName is not exit !";
+                return "change log fail! please check your packageName, packageName is not exit !";
             }
             for (String name : aPackage) {
                 loggerContext.getLogger(name).setLevel(Level.valueOf(logLevel));
