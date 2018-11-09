@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class testName1 {
+public class TestName1 {
     public void testInfo(){
-        log.info("service info test");
-        log.error("service error test");
-        log.debug("service bug test");
+        log.info("testName1 info test");
+        log.error("testName1 error test");
+        log.debug("testName1 bug test");
     }
 }
