@@ -1,9 +1,11 @@
 package com.example.logbackemail;
 
+import com.example.logbackemail.downloadlog.DownLoadLogs;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -13,6 +15,9 @@ import java.util.Date;
 @SpringBootTest
 public class LogbackemailApplicationTests {
     private final static Logger logger =  LoggerFactory.getLogger(LogbackemailApplicationTests.class);
+
+    @Autowired
+    DownLoadLogs downLoadLogs;
 
     @Test
     public void contextLoads() {
@@ -27,5 +32,9 @@ public class LogbackemailApplicationTests {
            Date date = new Date();
             logger.error("异常发生时间："+date,e);
         }
+    }
+
+    @Test
+    public void downLoad(){
     }
 }
