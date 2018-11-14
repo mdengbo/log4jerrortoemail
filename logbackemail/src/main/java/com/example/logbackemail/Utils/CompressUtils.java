@@ -1,22 +1,15 @@
 package com.example.logbackemail.Utils;
 
-import java.io.File;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
-import lombok.extern.slf4j.Slf4j;
-import net.lingala.zip4j.core.ZipFile;
-import net.lingala.zip4j.exception.ZipException;
-import net.lingala.zip4j.model.ZipParameters;
-import net.lingala.zip4j.util.Zip4jConstants;
-import org.springframework.stereotype.Component;
 
 /**
  * @author madengbo
@@ -28,148 +21,162 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class CompressUtils {
 
-    private ZipFile zipFile;
+    public void zipFile(File[] subs, String baseName, ZipOutputStream zos) throws Exception {
 
-    private ZipParameters zipParameters;
+        for (int i = 0; i < subs.length; i++) {
 
-    private int result = 0;
-
-    //状态返回值
-    private static final String TAG = "CompressOperate_zip4j";
-    /**
-     *  zip4j压缩
-     * @param filePath 要压缩的文件路径（可文件，可目录）
-     * @param zipFilePath zip生成的文件路径
-     * @param password  密码
-     * @return 状态返回值
-     */
-    public int compressZip4j(String filePath, String zipFilePath, String password) {
-
-        File sourceFile = new File(filePath);
-
-        File zipFile_ = new File(zipFilePath);
-
-        try { zipFile = new ZipFile(zipFile_);
-            //zipFile.setFileNameCharset("GBK");
-            //设置编码格式（支持中文）
-            zipParameters = new ZipParameters();
-            zipParameters.setCompressionMethod(Zip4jConstants.COMP_DEFLATE);
-            //压缩方式
-            zipParameters.setCompressionLevel(Zip4jConstants.DEFLATE_LEVEL_NORMAL);
-            //压缩级别
-            if (password != null && password != "")
-            { //是否要加密(加密会影响压缩速度)
-                zipParameters.setEncryptFiles(true);
-                zipParameters.setEncryptionMethod(Zip4jConstants.ENC_METHOD_STANDARD);
-                // 加密方式
-                zipParameters.setPassword(password.toCharArray()); }
-                if (zipFile_.isDirectory()) { String sourceFileName = checkString(sourceFile.getName());
-                //文件校验
-                zipFilePath = zipFilePath + "/" + sourceFileName + ".zip";
-                log.info(TAG, "保存压缩文件的路径(zipFilePath)：" + zipFilePath);
-                compressZip4j(filePath,zipFilePath,password);
-            }
-            if (sourceFile.isDirectory()) {
-                File[] files = sourceFile.listFiles();
-                ArrayList<File> arrayList = new ArrayList<File>();
-                Collections.addAll(arrayList, files); zipFile.addFolder(sourceFile, zipParameters);
-            } else {
-                zipFile.addFile(sourceFile, zipParameters);
-            }
-            log.info(TAG, "compressZip4j: 压缩成功");
-        } catch (ZipException e) {
-            log.error(TAG, "compressZip4j: 异常：" + e);
-            result = -1; return result;
-        }
-
-        return result;
-    }
-        /**
-        * 校验提取出的原文件名字是否带格式
-        * @param sourceFileName 要压缩的文件名
-        * @return
-        */
-        private String checkString(String sourceFileName){
-
-         if (sourceFileName.indexOf(".") > 0){
-             sourceFileName = sourceFileName.substring(0,sourceFileName.length() - 4);
-            log.info(TAG, "checkString: 校验过的sourceFileName是：" + sourceFileName);
-         }
-
-         return sourceFileName;
-
-        }
-         /**
-         *  zip4j解压
-         * @param zipFilePath 待解压的zip文件（目录）路径
-         * @param filePath 解压到的保存路径
-         * @param password  密码
-         * @return 状态返回值
-         */
-         public int uncompressZip4j(String zipFilePath, String filePath, String password) {
-             File zipFile_ = new File(zipFilePath);
-             File sourceFile = new File(filePath);
-             try {
-                 zipFile = new ZipFile(zipFile_);
-                 zipFile.setFileNameCharset("GBK");
-                 //设置编码格式（支持中文）
-                 if (!zipFile.isValidZipFile()){
-                     //检查输入的zip文件是否是有效的zip文件
-                     throw new ZipException("压缩文件不合法,可能被损坏.");
-                 } if (sourceFile.isDirectory() && !sourceFile.exists()) {
-                     sourceFile.mkdir();
-                 }
-                 if (zipFile.isEncrypted()) {
-                     zipFile.setPassword(password.toCharArray());
-                 }
-                 zipFile.extractAll(filePath);
-                 //解压
-                 log.info(TAG, "uncompressZip4j: 解压成功");
-             } catch (ZipException e) {
-                 log.error(TAG, "uncompressZip4j: 异常："+ e);
-                 result = -1; return result;
-             }
-             return result;
-         }
-
-
-
-    public void zipFile(File[] subs, String baseName, ZipOutputStream zos) throws IOException {
-        for (int i=0;i<subs.length;i++) {
-            File f=subs[i];
+            File f = subs[i];
             zos.putNextEntry(new ZipEntry(baseName + f.getName()));
             FileInputStream fis = new FileInputStream(f);
             byte[] buffer = new byte[1024];
             int r = 0;
             while ((r = fis.read(buffer)) != -1) {
                 zos.write(buffer, 0, r);
+                zos.flush();
             }
+            zos.closeEntry();
             fis.close();
         }
     }
-    public String getZipFilename(){
-        Date date=new Date();
-        String s=date.getTime()+".zip";
+
+    public String getZipFilename(String zipName) {
+        //默认时间命名
+        Date date = new Date();
+        String s = date.getTime() + ".zip";
+
+        if (null != zipName || zipName != "") {
+            s = zipName + s;
+        }
         return s;
     }
 
-    public List getFileName(String filePath){
+    public List getFileName(String filePath) {
         File file = new File(filePath);
         List fileNameList = new ArrayList();
         File[] fileList = file.listFiles();
-        if(fileList == null || fileList.length ==0){
+        if (fileList == null || fileList.length == 0) {
             return null;
         }
-        for(int i=0;i<fileList.length;i++){
-            if("txt".equals(fileList[i].getName().substring(fileList[i].getName().lastIndexOf(".") + 1))){
+        for (int i = 0; i < fileList.length; i++) {
+            if ("txt".equals(fileList[i].getName().substring(fileList[i].getName().lastIndexOf(".") + 1))) {
                 continue;
             }
-            if(fileList[i].isFile()){
+            if (fileList[i].isFile()) {
                 String fileName = fileList[i].getName();
                 fileNameList.add(fileName);
             }
         }
         return fileNameList;
+    }
+
+    public HttpServletResponse downLoadFiles(List<File> files, HttpServletResponse response) throws Exception {
+        try {
+            //List<File> 作为参数传进来，就是把多个文件的路径放到一个list里面
+
+            //创建一个临时压缩文件
+
+            //临时文件可以放在CDEF盘中，但不建议这么做，因为需要先设置磁盘的访问权限，最好是放在服务器上，方法最后有删除临时文件的步骤
+            String zipFilename = "D:/tempFile.zip";
+            File file = new File(zipFilename);
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            response.reset();
+            //response.getWriter()
+            //创建文件输出流
+            FileOutputStream fous = new FileOutputStream(file);
+            ZipOutputStream zipOut = new ZipOutputStream(fous);
+            zipFile(files, zipOut);
+            zipOut.close();
+            fous.close();
+            return downloadZip(file, response);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return response;
+    }
+
+    /**
+     * 把接受的全部文件打成压缩包
+     */
+    public static void zipFile(List files, ZipOutputStream outputStream) {
+        int size = files.size();
+        for (int i = 0; i < size; i++) {
+            File file = (File) files.get(i);
+            zipFile(file, outputStream);
+        }
+    }
+
+    /**
+     * 根据输入的文件与输出流对文件进行打包
+     */
+    public static void zipFile(File inputFile, ZipOutputStream ouputStream) {
+        try {
+            if (inputFile.exists()) {
+                if (inputFile.isFile()) {
+                    FileInputStream IN = new FileInputStream(inputFile);
+                    BufferedInputStream bins = new BufferedInputStream(IN, 512);
+                    ZipEntry entry = new ZipEntry(inputFile.getName());
+                    ouputStream.putNextEntry(entry);
+                    // 向压缩文件中输出数据
+                    int nNumber;
+                    byte[] buffer = new byte[512];
+                    while ((nNumber = bins.read(buffer)) != -1) {
+                        ouputStream.write(buffer, 0, nNumber);
+                    }
+                    // 关闭创建的流对象
+                    bins.close();
+                    IN.close();
+                } else {
+                    try {
+                        File[] files = inputFile.listFiles();
+                        for (int i = 0; i < files.length; i++) {
+                            zipFile(files[i], ouputStream);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static HttpServletResponse downloadZip(File file, HttpServletResponse response) {
+        if (file.exists() == false) {
+            System.out.println("待压缩的文件目录：" + file + "不存在.");
+        } else {
+            try {
+                // 以流的形式下载文件。
+                InputStream fis = new BufferedInputStream(new FileInputStream(file.getPath()));
+                byte[] buffer = new byte[fis.available()];
+                fis.read(buffer);
+                fis.close();
+                // 清空response
+                response.reset();
+
+                OutputStream toClient = new BufferedOutputStream(response.getOutputStream());
+                response.setContentType("application/octet-stream");
+
+                //如果输出的是中文名的文件，在此处就要用URLEncoder.encode方法进行处理
+                response.setHeader("Content-Disposition", "attachment;filename="
+                        + new String(file.getName().getBytes("GB2312"), "ISO8859-1"));
+                toClient.write(buffer);
+                toClient.flush();
+                toClient.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            } finally {
+                try {
+                    File f = new File(file.getPath());
+                    f.delete();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return response;
     }
 
 }
