@@ -129,7 +129,7 @@ public class DownLoadLogs {
                     //设置response内容的类型 普通下载类型
                     response.setContentType("application/x-download");
                     //设置response内容的类型 下载安卓应用apk
-                    response.setContentType("application/vnd.android.package-archive");
+                    //response.setContentType("application/vnd.android.package-archive");
                     //设置文件大小
                     response.setContentLength((int) f.length());
                     //设置头部信息
