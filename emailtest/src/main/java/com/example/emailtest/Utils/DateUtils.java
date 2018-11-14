@@ -1,4 +1,4 @@
-package com.example.logs4jemail.Utils;
+package com.example.emailtest.Utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

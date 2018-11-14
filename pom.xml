@@ -6,7 +6,7 @@
     <groupId>com.example</groupId>
     <artifactId>logs4jemail</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>logs4jemail</name>
     <description>Demo project for Spring Boot</description>
@@ -17,6 +17,12 @@
         <version>2.1.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <modules>
+        <module>emailtest</module>
+        <module>changelogerror</module>
+        <module>logbackemail</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -72,9 +78,6 @@
             <artifactId>mail</artifactId>
             <version>1.4.7</version>
         </dependency>
-
-
-
 
     </dependencies>
 
