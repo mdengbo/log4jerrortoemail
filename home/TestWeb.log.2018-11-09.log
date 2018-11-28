@@ -1,0 +1,304 @@
+2018-11-09 08:44:35.179 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 1448 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 08:44:35.181 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 08:44:35.982 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 08:44:35.993 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 08:44:35.997 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 08:44:35.997 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 08:44:36.003 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 08:44:36.076 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 08:44:36.076 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 865 ms
+2018-11-09 08:44:36.094 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 08:44:36.098 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 08:44:36.098 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 08:44:36.098 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 08:44:36.098 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 08:44:36.261 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 08:44:36.403 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 08:44:36.414 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 08:44:36.430 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 08:44:36.433 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 1.911 seconds (JVM running for 2.785)
+2018-11-09 08:45:34.396 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-09 08:45:34.396 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-11-09 08:45:34.402 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2018-11-09 08:45:55.490 [http-nio-8080-exec-3] INFO  com.example.changelogerror.service.LogTest - service info test
+2018-11-09 08:45:55.490 [http-nio-8080-exec-3] ERROR com.example.changelogerror.service.LogTest - service error test
+2018-11-09 08:45:55.490 [http-nio-8080-exec-3] INFO  com.example.changelogerror.service2.Service2Test - service2test info test
+2018-11-09 08:45:55.490 [http-nio-8080-exec-3] ERROR com.example.changelogerror.service2.Service2Test - service2test error test
+2018-11-09 08:45:55.490 [http-nio-8080-exec-3] INFO  com.example.changelogerror.testlog.Service3Test - service3test info test
+2018-11-09 08:45:55.490 [http-nio-8080-exec-3] ERROR com.example.changelogerror.testlog.Service3Test - service3test error test
+2018-11-09 08:45:55.490 [http-nio-8080-exec-3] INFO  c.example.changelogerror.service.logge2.TestName1 - testName1 info test
+2018-11-09 08:45:55.491 [http-nio-8080-exec-3] ERROR c.example.changelogerror.service.logge2.TestName1 - testName1 error test
+2018-11-09 08:45:55.491 [http-nio-8080-exec-3] INFO  c.example.changelogerror.service.logge1.TestName2 - testName2 info test
+2018-11-09 08:45:55.491 [http-nio-8080-exec-3] ERROR c.example.changelogerror.service.logge1.TestName2 - testName2 error test
+2018-11-09 08:45:55.491 [http-nio-8080-exec-3] INFO  com.example.changelogerror.Logger.logge2.TestName3 - testName3 info test
+2018-11-09 08:45:55.491 [http-nio-8080-exec-3] ERROR com.example.changelogerror.Logger.logge2.TestName3 - testName3 error test
+2018-11-09 08:45:55.491 [http-nio-8080-exec-3] INFO  com.example.changelogerror.Logger.logger.TestName4 - testName4 info test
+2018-11-09 08:45:55.491 [http-nio-8080-exec-3] ERROR com.example.changelogerror.Logger.logger.TestName4 - testName4 error test
+2018-11-09 08:47:08.032 [http-nio-8080-exec-7] INFO  com.example.changelogerror.service.LogTest - service info test
+2018-11-09 08:47:08.032 [http-nio-8080-exec-7] ERROR com.example.changelogerror.service.LogTest - service error test
+2018-11-09 08:47:08.032 [http-nio-8080-exec-7] INFO  com.example.changelogerror.service2.Service2Test - service2test info test
+2018-11-09 08:47:08.032 [http-nio-8080-exec-7] ERROR com.example.changelogerror.service2.Service2Test - service2test error test
+2018-11-09 08:47:08.033 [http-nio-8080-exec-7] INFO  com.example.changelogerror.testlog.Service3Test - service3test info test
+2018-11-09 08:47:08.033 [http-nio-8080-exec-7] ERROR com.example.changelogerror.testlog.Service3Test - service3test error test
+2018-11-09 08:47:08.033 [http-nio-8080-exec-7] ERROR c.example.changelogerror.service.logge2.TestName1 - testName1 error test
+2018-11-09 08:47:08.033 [http-nio-8080-exec-7] INFO  c.example.changelogerror.service.logge1.TestName2 - testName2 info test
+2018-11-09 08:47:08.033 [http-nio-8080-exec-7] ERROR c.example.changelogerror.service.logge1.TestName2 - testName2 error test
+2018-11-09 08:47:08.033 [http-nio-8080-exec-7] ERROR com.example.changelogerror.Logger.logge2.TestName3 - testName3 error test
+2018-11-09 08:47:08.033 [http-nio-8080-exec-7] INFO  com.example.changelogerror.Logger.logger.TestName4 - testName4 info test
+2018-11-09 08:47:08.033 [http-nio-8080-exec-7] ERROR com.example.changelogerror.Logger.logger.TestName4 - testName4 error test
+2018-11-09 10:35:50.294 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 7328 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 10:35:50.296 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 10:35:50.998 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 10:35:51.008 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 10:35:51.011 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 10:35:51.012 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 10:35:51.016 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 10:35:51.085 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 10:35:51.085 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 763 ms
+2018-11-09 10:35:51.104 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 10:35:51.107 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 10:35:51.107 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 10:35:51.107 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 10:35:51.107 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 10:35:51.264 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 10:35:51.386 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 10:35:51.397 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 10:35:51.413 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 10:35:51.415 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 1.868 seconds (JVM running for 2.503)
+2018-11-09 10:36:05.011 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-09 10:36:05.011 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-11-09 10:36:05.016 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2018-11-09 10:53:12.894 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 9440 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 10:53:12.899 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 10:53:13.635 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 10:53:13.645 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 10:53:13.649 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 10:53:13.649 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 10:53:13.654 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 10:53:13.720 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 10:53:13.720 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 782 ms
+2018-11-09 10:53:13.741 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 10:53:13.745 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 10:53:13.745 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 10:53:13.745 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 10:53:13.745 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 10:53:13.914 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 10:53:14.043 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 10:53:14.059 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 10:53:14.078 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 10:53:14.081 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 2.087 seconds (JVM running for 2.749)
+2018-11-09 13:00:27.342 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 10804 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 13:00:27.360 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 13:00:28.178 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 13:00:28.188 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:00:28.192 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 13:00:28.192 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 13:00:28.197 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 13:00:28.262 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 13:00:28.262 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 842 ms
+2018-11-09 13:00:28.281 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 13:00:28.285 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 13:00:28.285 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 13:00:28.285 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 13:00:28.285 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 13:00:28.463 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 13:00:28.585 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:00:28.595 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 13:00:28.610 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 13:00:28.612 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 1.914 seconds (JVM running for 2.502)
+2018-11-09 13:00:48.096 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-09 13:00:48.096 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-11-09 13:00:48.101 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] INFO  com.example.changelogerror.service.LogTest - service info test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] ERROR com.example.changelogerror.service.LogTest - service error test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] INFO  com.example.changelogerror.service2.Service2Test - service2test info test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] ERROR com.example.changelogerror.service2.Service2Test - service2test error test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] INFO  com.example.changelogerror.testlog.Service3Test - service3test info test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] ERROR com.example.changelogerror.testlog.Service3Test - service3test error test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] INFO  c.example.changelogerror.service2.logge1.TestName - testName info test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] ERROR c.example.changelogerror.service2.logge1.TestName - testName error test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] INFO  c.example.changelogerror.service.logge2.TestName1 - testName1 info test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] ERROR c.example.changelogerror.service.logge2.TestName1 - testName1 error test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] INFO  c.example.changelogerror.service.logge1.TestName2 - testName2 info test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] ERROR c.example.changelogerror.service.logge1.TestName2 - testName2 error test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] INFO  com.example.changelogerror.Logger.logge2.TestName3 - testName3 info test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] ERROR com.example.changelogerror.Logger.logge2.TestName3 - testName3 error test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] INFO  com.example.changelogerror.Logger.logger.TestName4 - testName4 info test
+2018-11-09 13:00:48.118 [http-nio-8080-exec-1] ERROR com.example.changelogerror.Logger.logger.TestName4 - testName4 error test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] INFO  com.example.changelogerror.service.LogTest - service info test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] ERROR com.example.changelogerror.service.LogTest - service error test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] INFO  com.example.changelogerror.service2.Service2Test - service2test info test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] ERROR com.example.changelogerror.service2.Service2Test - service2test error test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] INFO  com.example.changelogerror.testlog.Service3Test - service3test info test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] ERROR com.example.changelogerror.testlog.Service3Test - service3test error test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] INFO  c.example.changelogerror.service2.logge1.TestName - testName info test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] ERROR c.example.changelogerror.service2.logge1.TestName - testName error test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] INFO  c.example.changelogerror.service.logge2.TestName1 - testName1 info test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] ERROR c.example.changelogerror.service.logge2.TestName1 - testName1 error test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] DEBUG c.example.changelogerror.service.logge2.TestName1 - testName1 bug test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] INFO  c.example.changelogerror.service.logge1.TestName2 - testName2 info test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] ERROR c.example.changelogerror.service.logge1.TestName2 - testName2 error test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] INFO  com.example.changelogerror.Logger.logge2.TestName3 - testName3 info test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] ERROR com.example.changelogerror.Logger.logge2.TestName3 - testName3 error test
+2018-11-09 13:01:25.775 [http-nio-8080-exec-5] DEBUG com.example.changelogerror.Logger.logge2.TestName3 - testName3 bug test
+2018-11-09 13:01:25.776 [http-nio-8080-exec-5] INFO  com.example.changelogerror.Logger.logger.TestName4 - testName4 info test
+2018-11-09 13:01:25.776 [http-nio-8080-exec-5] ERROR com.example.changelogerror.Logger.logger.TestName4 - testName4 error test
+2018-11-09 13:01:57.932 [http-nio-8080-exec-8] INFO  com.example.changelogerror.service.LogTest - service info test
+2018-11-09 13:01:57.932 [http-nio-8080-exec-8] ERROR com.example.changelogerror.service.LogTest - service error test
+2018-11-09 13:01:57.932 [http-nio-8080-exec-8] INFO  com.example.changelogerror.service2.Service2Test - service2test info test
+2018-11-09 13:01:57.932 [http-nio-8080-exec-8] ERROR com.example.changelogerror.service2.Service2Test - service2test error test
+2018-11-09 13:01:57.932 [http-nio-8080-exec-8] INFO  com.example.changelogerror.testlog.Service3Test - service3test info test
+2018-11-09 13:01:57.932 [http-nio-8080-exec-8] ERROR com.example.changelogerror.testlog.Service3Test - service3test error test
+2018-11-09 13:01:57.933 [http-nio-8080-exec-8] ERROR c.example.changelogerror.service2.logge1.TestName - testName error test
+2018-11-09 13:01:57.933 [http-nio-8080-exec-8] ERROR c.example.changelogerror.service.logge2.TestName1 - testName1 error test
+2018-11-09 13:01:57.933 [http-nio-8080-exec-8] ERROR c.example.changelogerror.service.logge1.TestName2 - testName2 error test
+2018-11-09 13:01:57.933 [http-nio-8080-exec-8] ERROR com.example.changelogerror.Logger.logge2.TestName3 - testName3 error test
+2018-11-09 13:01:57.933 [http-nio-8080-exec-8] INFO  com.example.changelogerror.Logger.logger.TestName4 - testName4 info test
+2018-11-09 13:01:57.933 [http-nio-8080-exec-8] ERROR com.example.changelogerror.Logger.logger.TestName4 - testName4 error test
+2018-11-09 13:03:59.133 [http-nio-8080-exec-2] INFO  com.example.changelogerror.service.LogTest - service info test
+2018-11-09 13:03:59.133 [http-nio-8080-exec-2] ERROR com.example.changelogerror.service.LogTest - service error test
+2018-11-09 13:03:59.133 [http-nio-8080-exec-2] INFO  com.example.changelogerror.service2.Service2Test - service2test info test
+2018-11-09 13:03:59.133 [http-nio-8080-exec-2] ERROR com.example.changelogerror.service2.Service2Test - service2test error test
+2018-11-09 13:03:59.133 [http-nio-8080-exec-2] INFO  com.example.changelogerror.testlog.Service3Test - service3test info test
+2018-11-09 13:03:59.133 [http-nio-8080-exec-2] ERROR com.example.changelogerror.testlog.Service3Test - service3test error test
+2018-11-09 13:03:59.133 [http-nio-8080-exec-2] INFO  c.example.changelogerror.service2.logge1.TestName - testName info test
+2018-11-09 13:03:59.133 [http-nio-8080-exec-2] ERROR c.example.changelogerror.service2.logge1.TestName - testName error test
+2018-11-09 13:03:59.134 [http-nio-8080-exec-2] INFO  c.example.changelogerror.service.logge2.TestName1 - testName1 info test
+2018-11-09 13:03:59.134 [http-nio-8080-exec-2] ERROR c.example.changelogerror.service.logge2.TestName1 - testName1 error test
+2018-11-09 13:03:59.134 [http-nio-8080-exec-2] INFO  c.example.changelogerror.service.logge1.TestName2 - testName2 info test
+2018-11-09 13:03:59.134 [http-nio-8080-exec-2] ERROR c.example.changelogerror.service.logge1.TestName2 - testName2 error test
+2018-11-09 13:03:59.134 [http-nio-8080-exec-2] INFO  com.example.changelogerror.Logger.logge2.TestName3 - testName3 info test
+2018-11-09 13:03:59.134 [http-nio-8080-exec-2] ERROR com.example.changelogerror.Logger.logge2.TestName3 - testName3 error test
+2018-11-09 13:03:59.134 [http-nio-8080-exec-2] INFO  com.example.changelogerror.Logger.logger.TestName4 - testName4 info test
+2018-11-09 13:03:59.134 [http-nio-8080-exec-2] ERROR com.example.changelogerror.Logger.logger.TestName4 - testName4 error test
+2018-11-09 13:15:03.150 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 9164 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 13:15:03.153 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 13:15:03.859 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 13:15:03.869 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:15:03.872 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 13:15:03.872 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 13:15:03.877 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 13:15:03.944 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 13:15:03.944 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 762 ms
+2018-11-09 13:15:03.963 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 13:15:03.966 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 13:15:03.966 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 13:15:03.966 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 13:15:03.967 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 13:15:04.134 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 13:15:04.257 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:15:04.270 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 13:15:04.287 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 13:15:04.290 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 1.966 seconds (JVM running for 2.62)
+2018-11-09 13:15:33.865 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-09 13:15:33.865 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-11-09 13:15:33.870 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2018-11-09 13:18:59.583 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 11632 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 13:18:59.585 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 13:19:00.300 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 13:19:00.309 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:19:00.312 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 13:19:00.313 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 13:19:00.318 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 13:19:00.382 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 13:19:00.382 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 771 ms
+2018-11-09 13:19:00.403 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 13:19:00.407 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 13:19:00.407 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 13:19:00.407 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 13:19:00.407 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 13:19:00.574 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 13:19:00.704 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:19:00.714 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 13:19:00.730 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 13:19:00.733 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 1.9 seconds (JVM running for 2.558)
+2018-11-09 13:19:11.284 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-09 13:19:11.284 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-11-09 13:19:11.288 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2018-11-09 13:19:53.191 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 10692 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 13:19:53.193 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 13:19:53.941 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 13:19:53.951 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:19:53.955 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 13:19:53.955 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 13:19:53.961 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 13:19:54.027 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 13:19:54.028 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 806 ms
+2018-11-09 13:19:54.047 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 13:19:54.052 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 13:19:54.052 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 13:19:54.052 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 13:19:54.052 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 13:19:54.233 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 13:19:54.357 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:19:54.374 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 13:19:54.393 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 13:19:54.396 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 2.048 seconds (JVM running for 2.804)
+2018-11-09 13:20:08.389 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 11196 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 13:20:08.391 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 13:20:09.095 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 13:20:09.105 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:20:09.109 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 13:20:09.109 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 13:20:09.114 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 13:20:09.187 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 13:20:09.188 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 769 ms
+2018-11-09 13:20:09.209 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 13:20:09.213 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 13:20:09.213 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 13:20:09.213 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 13:20:09.213 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 13:20:09.398 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 13:20:09.529 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 13:20:09.547 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 13:20:09.569 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 13:20:09.571 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 2.037 seconds (JVM running for 2.906)
+2018-11-09 13:20:17.101 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-09 13:20:17.102 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-11-09 13:20:17.107 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2018-11-09 14:59:17.910 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 11672 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 14:59:17.910 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 14:59:18.882 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 14:59:18.894 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 14:59:18.897 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 14:59:18.898 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 14:59:18.903 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 14:59:18.971 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 14:59:18.971 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 983 ms
+2018-11-09 14:59:18.990 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 14:59:18.994 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 14:59:18.994 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 14:59:18.994 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 14:59:18.994 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 14:59:19.158 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 14:59:19.285 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 14:59:19.297 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 14:59:19.315 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 14:59:19.318 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 2.041 seconds (JVM running for 2.663)
+2018-11-09 14:59:54.649 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-09 14:59:54.649 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-11-09 14:59:54.655 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2018-11-09 14:59:54.684 [http-nio-8080-exec-1] INFO  com.example.changelogerror.controller.ChangeLevel - please check your packageName, packageName is not exit !
+2018-11-09 15:00:14.104 [http-nio-8080-exec-3] INFO  com.example.changelogerror.controller.ChangeLevel - please check your packageName, packageName is not exit !
+2018-11-09 15:00:56.306 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Starting ChangelogerrorApplication on SKY-20180622OIV with PID 11040 (E:\zhongkehengyun\personal\LX\log4jerrortoemail\changelogerror\target\classes started by Administrator in E:\zhongkehengyun\personal\LX\log4jerrortoemail)
+2018-11-09 15:00:56.306 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - No active profile set, falling back to default profiles: default
+2018-11-09 15:00:57.069 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-11-09 15:00:57.079 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 15:00:57.083 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-09 15:00:57.083 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-09 15:00:57.088 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\jdk\Java\Java\jdk1.8.0_131\bin;D:\develop\jdk\Java\Java\jdk1.8.0_131\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\develop\erl9.3\bin;D:\develop\maven3.9\bin;D:\develop\Git\cmd;D:\develop\apache-tomcat-7.0.57\apache-tomcat-7.0.57\BIN;D:\develop\;D:\develop\nodejs\node_global;D:\develop\erl9.3;D:\develop\rabbitmq_server-3.7.7;C:\Users\Administrator\AppData\Roaming\npm;.]
+2018-11-09 15:00:57.154 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-09 15:00:57.154 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 801 ms
+2018-11-09 15:00:57.177 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-09 15:00:57.181 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 15:00:57.181 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 15:00:57.181 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-09 15:00:57.181 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 15:00:57.403 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-09 15:00:57.598 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-11-09 15:00:57.617 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-09 15:00:57.637 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-09 15:00:57.640 [main] INFO  c.example.changelogerror.ChangelogerrorApplication - Started ChangelogerrorApplication in 2.091 seconds (JVM running for 2.835)
+2018-11-09 15:01:20.211 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-09 15:01:20.211 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-11-09 15:01:20.217 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
